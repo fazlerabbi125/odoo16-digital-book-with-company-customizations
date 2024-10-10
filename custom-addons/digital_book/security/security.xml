@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.rule" id="employee_digital_book_hr_rule">
+        <field name="name">Digital Book HR Rule</field>
+        <field name="model_id" ref="digital_book.model_employee_digital_book"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_create" eval="True"/>
+    </record>
+    <record model="ir.rule" id="employee_digital_book_emp_rule">
+        <field name="name">Digital Book Employee Rule</field>
+        <field name="model_id" ref="digital_book.model_employee_digital_book"/>
+        <field name="domain_force">['|',('employee_id.user_id','=',False),('employee_id.user_id','=',user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_create" eval="True"/>
+    </record>
+</odoo>
+
+

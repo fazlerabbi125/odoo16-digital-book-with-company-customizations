@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="employee_digital_book_type_form" model="ir.ui.view">
+        <field name="name">employee.digital.book.type.form</field>
+        <field name="model">employee.digital.book.type</field>
+        <field name="arch" type="xml">
+            <form string="Employee Digital Type">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="file_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="employee_digital_book_type_tree" model="ir.ui.view">
+        <field name="name">employee.digital.book.type.tree</field>
+        <field name="model">employee.digital.book.type</field>
+        <field name="arch" type="xml">
+            <tree string="Employee Digital Book Types">
+                <field name="name"/>
+                <field name="file_type"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_employee_digital_book_type" model="ir.actions.act_window">
+        <field name="name">Digital Book Type</field>
+        <field name="res_model">employee.digital.book.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

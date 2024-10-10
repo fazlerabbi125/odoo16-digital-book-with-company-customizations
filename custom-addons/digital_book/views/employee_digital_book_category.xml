@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="employee_digital_book_category_tree" model="ir.ui.view">
+        <field name="name">employee.digital.book.category.tree</field>
+        <field name="model">employee.digital.book.category</field>
+        <field name="arch" type="xml">
+            <tree string="Employee Digital Book Categories" editable="bottom">
+                <field name="name"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_employee_digital_book_category" model="ir.actions.act_window">
+        <field name="name">Digital Book Category</field>
+        <field name="res_model">employee.digital.book.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

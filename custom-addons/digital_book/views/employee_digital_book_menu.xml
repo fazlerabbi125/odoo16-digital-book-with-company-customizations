@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="employee_digital_book_root" name="Employee Digital Books" groups="hr.group_hr_user">
+        <menuitem id="employee_digital_book_main_menu" action="action_employee_digital_book" sequence="1"/>
+        <menuitem id="employee_digital_book_config_menu" name="Configuration" sequence="2">
+            <menuitem id="employee_digital_book_type_menu" action="action_employee_digital_book_type" sequence="1"/>
+            <menuitem id="employee_digital_book_category_menu" action="action_employee_digital_book_category"
+                      sequence="2"/>
+        </menuitem>
+    </menuitem>
+</odoo>
